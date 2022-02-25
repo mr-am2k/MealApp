@@ -9,7 +9,7 @@ const Header = (props) => { //Returning Header of the app built in 2 parts
         <React.Fragment>
             <header className={classes.header}>  {/* First part that holds name of the app and button for the cart*/}
                 <h1>Pappito Meals</h1>
-                <HeaderCartButton/>
+                <HeaderCartButton onClick={props.onCartClick}/>
             </header>
             <div className={classes['main-image']} > {/*Second part, that hold the header image, and CSS class is called like this because it has dash between words*/}
                 <img src={image} alt="Table full of delicious meals"/>

@@ -5,8 +5,10 @@ import CartIcon from "../Cart/CartIcon";
 import classes from "./HeaderCartButton.module.css";
 
 const HeaderCartButton = (props) => {
+
+
   return (
-    <button className={classes.button}> {/* Returning button that has icon, text description and counter for added items to the cart */}
+    <button className={classes.button} onClick={props.onClick}> {/* Returning button that has icon, text description and counter for added items to the cart */}
       <span className={classes.icon}>
         <CartIcon />
       </span>
