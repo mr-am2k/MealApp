@@ -2,7 +2,7 @@ import React, { useImperativeHandle, useReducer } from "react";
 
 import CartContext from "./cart-context";
 
-const defultCartState = {
+const defaultCartState = {
   items: [],
   totalAmount: 0,
 };
@@ -54,13 +54,13 @@ const cartReducer = (state, action) => {
             totalAmount: updatedTotalAmount
         }
   }
-  return defultCartState;
+  return defaultCartState;
 };
 
-const CartPovider = (props) => {
+const CartProvider = (props) => {
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
-    defultCartState
+    defaultCartState
   );
 
   const addItemToCartHandler = (item) => {
@@ -85,4 +85,4 @@ const CartPovider = (props) => {
   );
 };
 
-export default CartPovider;
+export default CartProvider;

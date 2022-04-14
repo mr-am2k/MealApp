@@ -1,4 +1,4 @@
-const CartIcon = () => { //REturning simple svg icon
+const CartIcon = () => { //Returning simple svg icon
     return (
       <svg
         xmlns='http://www.w3.org/2000/svg'
