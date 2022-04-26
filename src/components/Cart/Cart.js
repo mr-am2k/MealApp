@@ -32,14 +32,13 @@ const Cart = (props) => {
   }
 
   useEffect(() => {
-    console.log(isSubmitted)
     if(isSubmitted){
       cartCtx.clearCart()
       setIsSubmitted(false)
     }
   },[cartCtx, isSubmitted])
   
-  let cartItems = (
+  const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
         <CartItem
